@@ -109,3 +109,4 @@ RUN buildStamp=`date +%Y%m%d-%H%M%S`; \
     if [ -r master ]; then gitCommit=`cat master`;else gitCommit="Unknown";fi; \
     BUILD_EXTRA_INJECT="-X \"main.BuildStamp=$buildStamp\" -X \"main.BuildPlatform=$bp\" -X \"main.GitCommit=$gitCommit\""; \
     go build -mod=vendor -ldflags "$BUILD_EXTRA_INJECT" -o /go/bin/${EXPORTER} ./*.go
+WORKDIR $HOME
