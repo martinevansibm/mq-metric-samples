@@ -15,7 +15,7 @@ ARG EXPORTER=mq_prometheus
 # --- --- --- --- --- --- --- --- --- --- --- --- --- --- #
 ## ### ### ### ### ### ### BUILD ### ### ### ### ### ### ##
 # --- --- --- --- --- --- --- --- --- --- --- --- --- --- #
-FROM golang:1.19 AS builder
+FROM golang:1.18 AS builder
 
 ARG EXPORTER
 ENV EXPORTER=${EXPORTER} \
